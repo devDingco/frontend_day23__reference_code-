@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. 공통
+    - [ ]  완성된 day22 폴더를 활용하여 day23 을 완성해 주세요.
+2. 게시글등록
+    - [ ]  src/app/boards/new/page.tsx 파일의 코드를 보완해 주세요.
+        - [ ]  게시글 등록하기 버튼을p 클릭했을 때, 게시글 등록에 실패할 경우를 대비하여 try-catch 코드를 추가하고 에러가 나면, "에러가 발생하였습니다. 다시 시도해 주세요." 라는 메시지를 띄워주세요.
+        - [ ]  게시글 등록에 성공한 경우, 해당 게시글 페이지로 이동시켜 주세요.
+3. 게시글조회
+    - [ ]  src/app/boards/detail/page.tsx 파일의 경로를 다이나믹하게 변경하기 위해 src/app/boards/[boardId]/page.tsx 경로로 변경해 주세요.
+        - [ ]  해당 페이지에 접속하였을 때 주소 부분의 boardId 값을 꺼내오고, 꺼낸 id의 게시물을 GRAPHQL-API(fetchBoard)로 조회해 보세요.
+        - [ ]  조회된 게시물의 작성자, 제목, 내용을 알맞은 위치에 보여주세요.
+        - [ ]  데이터를 받아오는데 시간이 걸리는 이유로, 받아오기 전의 존재하지 않는 데이터를 그리는 과정에서 에러가 발생하게 됩니다. 이 문제를 해결해 주세요.
